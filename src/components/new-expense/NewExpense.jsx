@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import ExpenseForm from "../ExpenseForm/ExpenseForm";
 import Button from "../UI/button/Button";
-import "./Newexpense.css";
+import {BtnContainer} from '../UI/button/ButtonStyle'
 
 const NewExpense = ({ onNewExpenseAdd }) => {
   const [showForm, setShowform] = useState(false);
@@ -21,13 +21,13 @@ const NewExpense = ({ onNewExpenseAdd }) => {
           onExpenseAdd={onNewExpenseAdd}
         />
       ) : (
-        <div className="btnContainer">
+        <BtnContainer>
           <Button
             title="Добавить новый расход"
             onClick={showExpenseForm}
             btnStyle="btnStyle"
           />
-        </div>
+        </BtnContainer>
       )}
     </div>
   );

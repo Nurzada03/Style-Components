@@ -1,20 +1,23 @@
 import React from 'react'
-
-
-import './chartBar.css'
+import {
+  ChartBarCounteiner,
+  ChartBarInner,
+  ChartBarFill,
+  ChartBarLabel,
+} from "./ChartBarStyle";
 
 const ChartBar = ({maximumprice, currentPrice, label}) => {
 
     const fillHeight = (100 * currentPrice)/ maximumprice
 
   return (
-    <div className="chart-bar">
-      <div className="chart-bar_inner">
-        <div className="chart-bar_fill" style={{ height:`${fillHeight}%` }}></div>
-      </div>
+    <ChartBarCounteiner>
+      <ChartBarInner>
+        <ChartBarFill style={{ height:`${fillHeight}%` }}></ChartBarFill>
+      </ChartBarInner>
 
-      <p className="chart-bar_label">{label}</p>
-    </div>
+      <ChartBarLabel>{label}</ChartBarLabel>
+    </ChartBarCounteiner>
   );
 }
 

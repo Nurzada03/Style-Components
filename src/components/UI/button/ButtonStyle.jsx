@@ -1,26 +1,29 @@
-.btn {
+import styled from "styled-components";
+
+export const Btn = styled.button`
   background-color: #4a026b;
   color: white;
-  padding: 15px 25px;
+  padding: 20px 30px;
   border-radius: 10px;
-}
+`;
 
-.btnForm {
+export const BtnForm = styled.form`
   display: flex;
   justify-content: flex-end;
   gap: 20px;
   margin-right: 60px;
-}
-.btnStyle {
+`;
+
+export const BtnStyle = styled.button`
   background-color: #4a026b;
   color: white;
-  padding: 15px 25px;
+  padding: 25px 30px;
   border-radius: 10px;
-}
+`;
 
-.btnContainer {
+export const BtnContainer = styled.div`
   display: flex;
 
   justify-content: center;
   align-items: center;
-}
+`;

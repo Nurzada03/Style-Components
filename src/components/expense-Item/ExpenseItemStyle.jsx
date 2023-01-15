@@ -1,21 +1,26 @@
-.list {
+import styled from "styled-components";
+
+
+export const List = styled.div`
   border: 3px solid #4b4b4b;
   background-color: #4b4b4b;
   margin-bottom: 25px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-}
-.Mainlist {
-  border: 3px solid red;
+`
+
+
+export const Mainlist = styled.div`
+    border: 3px solid red;
   padding: 50px;
   background-color: #1f1f1f;
   border: 0px solid #1f1f1f;
   border-radius: 7px;
-}
+`
 
-.dateContainer {
-  background-color: #2a2a2a;
+export const DateContainer = styled.p`
+ background-color: #2a2a2a;
   max-width: 100px;
   height: 80px;
   border-radius: 5px;
@@ -24,18 +29,21 @@
   font-size: 12px;
   margin-left: 20px;
   text-align: center;
-}
-.innerList {
-  display: flex;
-}
-.innerListP {
+`
+ 
+
+export const InnerList = styled.div`
+ display: flex;
+` 
+export const InnerListP = styled.p`
+
   color: aliceblue;
   margin-left: 30px;
   margin-top: 35px;
   font-size: 20px;
-}
-.secondContainer {
-  max-width: 80px;
+`
+export const SecondContainer = styled.div`
+ max-width: 80px;
   max-height: 80px;
   background-color: #40005d;
   color: aliceblue;
@@ -46,4 +54,6 @@
   align-self: center;
   margin-right: 30px;
   padding-left: 20px;
-}
+`
+ 
+

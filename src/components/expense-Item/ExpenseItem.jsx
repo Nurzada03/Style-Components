@@ -1,15 +1,23 @@
 import React from "react";
-import "./ExpenseItem.css";
+import {
+  List,
+  InnerList,
+  DateContainer,
+  InnerListP,
+  SecondContainer,
+} from "./ExpenseItemStyle";
+
+
 export const ExpenseItem = ({ title, date, price }) => {
   return (
-    <div className="list">
-      <div className="innerList">
-        <p className="dateContainer">{new Date(date).toString()}</p>
-        <p className="innerListP">{title}</p>
-      </div>
-      <div className="secondContainer">
+    <List>
+      <InnerList >
+        <DateContainer>{new Date(date).toString()}</DateContainer>
+        <InnerListP>{title}</InnerListP>
+      </InnerList>
+      <SecondContainer>
         <p>{price} som</p>
-      </div>
-    </div>
+      </SecondContainer>
+    </List>
   );
 };

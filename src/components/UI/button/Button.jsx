@@ -1,11 +1,12 @@
 import React from "react";
-import "./Button.css";
+
+import { BtnStyle } from "./ButtonStyle";
 
 const Button = (props) => {
   return (
-    <button className={props.btnStyle} onClick={props.onClick} disabled={props.disabled}>
+    <BtnStyle BtnStyle onClick={props.onClick} disabled={props.disabled}>
       {props.title}
-    </button>
+    </BtnStyle>
   );
 };
 

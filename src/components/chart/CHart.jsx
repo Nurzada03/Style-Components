@@ -1,10 +1,9 @@
 import React from "react";
 
-import "./chart.css";
+import { ChartCounteinerFirst } from "./ChartStyle";
 import ChartBar from "./ChartBar";
 
 const Chart = ({ expenses }) => {
-  console.log(expenses);
   const maximumrPrice = 2000;
 
   const months = [
@@ -60,13 +59,12 @@ const Chart = ({ expenses }) => {
   ];
 
   expenses.forEach((item) => {
-
-    const monthNumber = new Date (item.date).getMonth();
+    const monthNumber = new Date(item.date).getMonth();
     months[monthNumber].currentPrice += item.price;
   });
-  console.log(months);
+
   return (
-    <div className="chart">
+    <ChartCounteinerFirst>
       {months.map((item) => {
         return (
           <ChartBar
@@ -77,7 +75,7 @@ const Chart = ({ expenses }) => {
           />
         );
       })}
-    </div>
+    </ChartCounteinerFirst>
   );
 };
 

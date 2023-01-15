@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import styled from "styled-components";
 import Button from "../UI/button/Button";
 import FormInput from "../UI/Input/FormInput";
 
@@ -41,7 +42,7 @@ const ExpenseForm = (props) => {
 
   return (
     <div>
-      <div className="input-container">
+      <InputContainer>
         <FormInput
           id="name"
           labelName="Название"
@@ -62,8 +63,8 @@ const ExpenseForm = (props) => {
           value={price}
           onChange={priceInputChangeHandler}
         />
-      </div>
-      <div className="dataForm">
+      </InputContainer>
+      <div>
         <FormInput
           labelName="Дата"
           inputType="date"
@@ -75,7 +76,7 @@ const ExpenseForm = (props) => {
           onChange={dateInputChangeHandler}
         />
       </div>
-      <div className="btnForm">
+      <ButtonForm>
         <Button title="Отмена" onClick={cancelHandler} btnStyle="btn" />
         <Button
           title="Сохранить"
@@ -83,9 +84,27 @@ const ExpenseForm = (props) => {
           onClick={saveHandler}
           disabled={!enabled}
         />
-      </div>
+      </ButtonForm>
     </div>
   );
 };
+
+
+
+const InputContainer = styled.div`
+  
+display:flex;
+justify-content: space-around;
+gap: 20px;
+margin-top: 20px;
+
+`
+const ButtonForm = styled.div`
+  
+  display:flex;
+  justify-content:flex-end;
+gap: 30px;
+
+`
 
 export default ExpenseForm;

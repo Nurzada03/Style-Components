@@ -1,6 +1,9 @@
 import React from "react";
 
-import "./FormInput.css";
+
+
+
+import { StyleLabel, StyleInput } from "./FormInputStyle";
 
 const FormInput = ({
   id,
@@ -12,20 +15,20 @@ const FormInput = ({
   ...rest
 }) => {
   return (
-    <form className="container">
-      <label htmlFor={id} className={styleLabel}>
-        {labelName}
-      </label>
+    <form>
+      <StyleLabel>{labelName}</StyleLabel>
       <br />
-      <input
+      <StyleInput
         type={inputType}
         placeholder={placeholder || "..."}
         id={id}
-        className={styleInput}
         {...rest}
       />
     </form>
   );
 };
+
+
+
 
 export default FormInput;

@@ -1,9 +1,11 @@
-import "./App.css";
+
 
 import { Expenses } from "./components/expenses/Expenses";
 import NewExpense from "./components/new-expense/NewExpense";
 import { useState } from "react";
-
+import { MainContainer} from "./AppStyle";
+import { InnerContainer } from "./AppStyle";
+import styled from "styled-components";
 
 
 
@@ -28,19 +30,31 @@ const addNewExpenseHadler = (data) =>{
   setExpenses(upExpenses)
 }
 
-  return (
-    <div className="App">
-      <div>
-         <div className="inner-container">
+  return ( 
+      <MainContainer>
+  <ContentContainer>
+    <InnerContainer>
         <NewExpense onNewExpenseAdd={addNewExpenseHadler} />
-      </div>
+      </InnerContainer>
 
       <Expenses expenses={expenses} />
-      </div>
+    
+
+  </ContentContainer>
+         
+  
      
-    </div>
+    </MainContainer>
   );
 }
+
+const ContentContainer = styled.div`
+
+width:60%;
+padding: 30px;
+
+`
+
 
 export default App;
 
